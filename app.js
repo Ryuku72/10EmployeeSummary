@@ -8,7 +8,7 @@ const inquirer = require("inquirer");
 // const outputPath = path.join(OUTPUT_DIR, "team.html");​
 // const render = require("./lib/htmlRenderer");​
 
-const chalk = require("chalk");
+const teamlist = [];
 
 const questions = [{
         type: "input",
@@ -96,32 +96,55 @@ const questions = [{
 
 ];
 
-inquirer.prompt(questions)
+function getAnswers() {
+    return inquirer.prompt(questions)
     .then(data => {
 
         if (data.role == "Manager") {
             const resultManager = new Manager(data.name, data.id, data.gender, data.age, data.email, data.role, data.officeNumber);
-            console.log( chalk.red.bold(resultManager))
+            console.log((resultManager))
+            teamlist.push({data}); 
         } 
         if (data.role === "Engineer") {
             const resultEngineer = new Engineer(data.name, data.id, data.gender, data.age, data.email, data.role, data.github);
             console.log(resultEngineer)
+            teamlist.push({data}); 
         } 
         if (data.role === "Intern") {
             const resultIntern = new Intern(data.name, data.id, data.gender, data.age, data.email, data.role, data.school);
             console.log(resultIntern);
+            teamlist.push({data}); 
         }
 
-    }) .catch(error => {
+    })
+
+    .then((data) => {
+        inquirer.prompt({
+            type: 'confirm',
+            name: 'confirmed',
+            message: 'Do you want to add another team member?',
+            default: false
+    }).then((reply) => {
+        if (reply.confirmed) {
+            return getAnswers(data)
+        } else {
+            console.log (teamlist);
+        }
+    })
+    
+    
+    
+    .catch(error => {
         if (error.isTtyError) {
             // Prompts can't be rendered in the current environment
         } else {
             console.error(error)
         }
 
-    });
-
-
+    })
+});
+}
+getAnswers()
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
