@@ -2,48 +2,43 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
-// const path = require("path");
-// const fs = require("fs");​
-// const OUTPUT_DIR = path.resolve(__dirname, "output")
-// const outputPath = path.join(OUTPUT_DIR, "team.html");​
-// const render = require("./lib/htmlRenderer");​
+//const path = require("path");
+const fs = require('fs');
+//const OUTPUT_DIR = path.resolve(__dirname, "output")
+//const outputPath = path.join(OUTPUT_DIR, "team.html");​
+//const render = require("./lib/htmlRenderer");​
 
-const teamlist = [];
+var validator = require("email-validator");
+
+
+const manager = [];
+const engineer = [];
+const intern = [];
 
 const questions = [{
         type: "input",
         name: "name",
         message: "Please enter full name",
-        default: "John Does",
-        validate: function validateFirstName(name) {
-            return name !== '';
-        }
+        default: "John Doe",
+        validate: validName = function(name){
+            if (name === '') {
+                return "Blank is not a name. Please try again";
+            }
+            return true;
+        } 
     },
 
     {
         type: "input",
         name: "id",
-        default: "009221D",
+        default: "00921D",
         message: "Please enter 6 digit ID number",
-        validate: function validateID(id) {
-            return id !== '';
+        validate: validID = function(id){
+            if(id.length == 6){
+                return true
+            }
+                return "incorrect character length"
         }
-    },
-
-    {
-        type: "list",
-        name: "gender",
-        message: "Please select gender",
-        default: "male",
-        choices: ["Male", "Female"],
-    },
-
-    {
-        type: "list",
-        name: "age",
-        message: "Please select age group",
-        default: "37 - 45 years old",
-        choices: ["19 - 25 years old", "26 - 30 years old", "31 - 36 years old", "37 - 45 years old", "Entering retirement"],
     },
 
     {
@@ -51,8 +46,11 @@ const questions = [{
         name: "email",
         message: "please enter email address",
         default: "hello@cligenerator.com",
-        validate: function validateEmail(email) {
-            return email !== '';
+        validate: validateEmail = function(email) {
+            if(validator.validate(email) === false){
+                return "not a valid email"
+            }
+            return validator.validate(email);
         }
     },
     {
@@ -65,12 +63,16 @@ const questions = [{
     {
         type: "input",
         name: "officeNumber",
-        message: "Please enter your OfficeNumber",
+        message: "Please enter your 4 digit OfficeNumber",
         default: "1D88",
         when: (answers) => answers.role === "Manager",
-        validate: function validateFirstName(officeNumber) {
-            return officeNumber !== '';
-        }
+        validate: validOffice = function(officeNumber){
+            if(officeNumber.length == 4){
+                return true
+            }
+            return "incorrect character length"
+        },
+        
     },
 
     {
@@ -79,41 +81,47 @@ const questions = [{
         message: "Please enter your Github username",
         default: "GitHubDefault",
         when: (answers) => answers.role === "Engineer",
-        validate: function validateFirstName(github) {
-            return github !== '';
-        }
+        validate: validatGithub = (github) => github !== ''
+        
     },
     {
         type: "input",
         name: "school",
         message: "Please enter your school of graduation",
-        default: "ComputerProgramSchool",
+        default: "University of Western Australia",
         when: (answers) => answers.role === "Intern",
-        validate: function validateFirstName(school) {
-            return school !== '';
-        }
+        validate: validateSchool = (school) => school !== ''
+        
     },
 
 ];
 
-function getAnswers() {
-    return inquirer.prompt(questions)
+getAnswers = () => inquirer.prompt(questions)
     .then(data => {
 
         if (data.role == "Manager") {
-            const resultManager = new Manager(data.name, data.id, data.gender, data.age, data.email, data.role, data.officeNumber);
+            const resultManager = new Manager(data.name, data.id, data.email, data.officeNumber, data.role);
             console.log((resultManager))
-            teamlist.push({data}); 
+            manager.push(data);
         } 
+        
         if (data.role === "Engineer") {
-            const resultEngineer = new Engineer(data.name, data.id, data.gender, data.age, data.email, data.role, data.github);
+            const resultEngineer = new Engineer(data.name, data.id, data.email, data.github, data.role);
             console.log(resultEngineer)
-            teamlist.push({data}); 
+            engineer.push(data); 
         } 
+
         if (data.role === "Intern") {
-            const resultIntern = new Intern(data.name, data.id, data.gender, data.age, data.email, data.role, data.school);
+            const resultIntern = new Intern(data.name, data.id, data.email, data.school, data.role);
             console.log(resultIntern);
-            teamlist.push({data}); 
+            intern.push(data); 
+        }
+
+    })  .catch(error => {
+        if (error.isTtyError) {
+            // Prompts can't be rendered in the current environment
+        } else {
+            console.error(error)
         }
 
     })
@@ -124,15 +132,16 @@ function getAnswers() {
             name: 'confirmed',
             message: 'Do you want to add another team member?',
             default: false
-    }).then((reply) => {
+    })
+    
+    .then((reply) => {
         if (reply.confirmed) {
             return getAnswers(data)
         } else {
-            console.log (teamlist);
+            var team = manager.concat(engineer, intern);
+            console.log(team)
         }
     })
-    
-    
     
     .catch(error => {
         if (error.isTtyError) {
@@ -143,8 +152,11 @@ function getAnswers() {
 
     })
 });
-}
+
 getAnswers()
+
+
+
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
