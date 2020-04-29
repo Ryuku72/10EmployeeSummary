@@ -2,18 +2,51 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
-//const path = require("path");
+const path = require('path');
 const fs = require('fs');
-//const OUTPUT_DIR = path.resolve(__dirname, "output")
-//const outputPath = path.join(OUTPUT_DIR, "team.html");​
-//const render = require("./lib/htmlRenderer");​
-
+const OUTPUT_DIR = path.resolve(__dirname, 'output');
+const outputPath = path.join(OUTPUT_DIR, 'team.html');
+const render = require('./lib/htmlRenderer');
 var validator = require("email-validator");
 
 
-const manager = [];
-const engineer = [];
-const intern = [];
+const manager = new Array();
+const engineer = new Array();
+const intern =  new Array();
+const employee = new Array();
+
+const profileCreator = function(data){
+ 
+    const gender = function(data){   
+        if (data.gender === true) {
+            return "m"
+        }
+        else {
+            return "w"
+        }
+        }
+    
+    const role = function(data){
+        return data.role
+        }
+    
+    const age = function(data){
+        if (data.age === "18 - 25 years old") {
+            return "01"
+        }
+        else if (data.age === "26 - 35 years old") {
+            return "02"
+        }
+        else if (data.age === "36 - 50 years old") {
+            return "03"
+        }
+        else {
+            return "04"
+        }
+    }
+
+    return `./assets/${role(data)}${gender(data)}${age(data)}.jpg`;
+}
 
 const questions = [{
         type: "input",
@@ -39,6 +72,22 @@ const questions = [{
             }
                 return "incorrect character length"
         }
+    },
+
+    {
+        type: "list",
+        name: "gender",
+        message: "Please select gender",
+        default: "male",
+        choices: ["Male", "Female"],
+    },
+
+    {
+        type: "list",
+        name: "age",
+        message: "Please select age group",
+        default: "37 - 45 years old",
+        choices: ["18 - 25 years old", "26 - 35 years old", "36 - 50 years old", "Retiree"],
     },
 
     {
@@ -96,26 +145,32 @@ const questions = [{
 
 ];
 
-getAnswers = () => inquirer.prompt(questions)
+const getAnswers = () => inquirer.prompt(questions)
     .then(data => {
+        
 
         if (data.role == "Manager") {
-            const resultManager = new Manager(data.name, data.id, data.email, data.officeNumber, data.role);
-            console.log((resultManager))
-            manager.push(data);
-        } 
+            const resultManager = new Manager(data.name, data.id, data.email, data.officeNumber, data.role, data.age, data.gender);
+            manager.push(resultManager);
+            profileCreator(data); 
+            console.log(manager);
+
+        }
         
         if (data.role === "Engineer") {
-            const resultEngineer = new Engineer(data.name, data.id, data.email, data.github, data.role);
-            console.log(resultEngineer)
-            engineer.push(data); 
+            const resultEngineer = new Engineer(data.name, data.id, data.email, data.github, data.role, data.age, data.gender);
+            engineer.push(resultEngineer); 
+            profileCreator(data);
+            console.log(engineer);
         } 
 
         if (data.role === "Intern") {
-            const resultIntern = new Intern(data.name, data.id, data.email, data.school, data.role);
-            console.log(resultIntern);
-            intern.push(data); 
+            const resultIntern = new Intern(data.name, data.id, data.email, data.school, data.role, data.age, data.gender);
+            intern.push(resultIntern); 
+            profileCreator(data);
+            console.log(intern);
         }
+
 
     })  .catch(error => {
         if (error.isTtyError) {
@@ -138,8 +193,15 @@ getAnswers = () => inquirer.prompt(questions)
         if (reply.confirmed) {
             return getAnswers(data)
         } else {
-            var team = manager.concat(engineer, intern);
+            var team = [...manager, ...engineer, ...intern];
+            employee.unshift(team);
             console.log(team)
+            let teamlist = render(team)
+            fs.writeFile(outputPath, teamlist, function (err, file) {
+                if (err) throw err;
+                console.log('Teamlist Generated!')
+            })
+
         }
     })
     
@@ -153,8 +215,8 @@ getAnswers = () => inquirer.prompt(questions)
     })
 });
 
-getAnswers()
 
+getAnswers()
 
 
 
@@ -180,3 +242,5 @@ getAnswers()
 // for further information. Be sure to test out each class and verify it generates an 
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work!```
+
+

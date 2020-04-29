@@ -1,0 +1,19 @@
+#backGround {
+    background-color:rgb(77, 77, 77);
+    height: 1000px;
+}
+
+.myHeader {
+    background-color: rgb(27, 101, 167);
+}
+
+#headerText{
+    padding-left: 3rem;
+    color: rgb(61, 107, 176);
+    font-family: 'Libre Barcode 39 Text', cursive;
+    font-size: 4em;
+}
+
+#cardStyle {
+    font-family: 'Press Start 2P', cursive;
+}
