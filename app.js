@@ -15,6 +15,7 @@ const engineer = new Array();
 const intern =  new Array();
 const employee = new Array();
 
+
 const profileCreator = function(data){
  
     const gender = function(data){   
@@ -194,7 +195,7 @@ const getAnswers = () => inquirer.prompt(questions)
             return getAnswers(data)
         } else {
             var team = [...manager, ...engineer, ...intern];
-            employee.unshift(team);
+            employee.push(team);
             console.log(team)
             let teamlist = render(team)
             fs.writeFile(outputPath, teamlist, function (err, file) {

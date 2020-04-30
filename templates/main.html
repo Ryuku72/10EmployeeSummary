@@ -1,33 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-au">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Foreign Toolkit Project Team</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="../style.css">
-        <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Press+Start+2P&display=swap" rel="stylesheet">
+    <title>JKB: Project Team</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Press+Start+2P|Orbitron|Permanent+Marker&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <link rel="stylesheet" href="../styleCust.css">
 </head>
 
-<body id="backGround">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading" id="myHeader">
-                <h1 class="text-center" id="headerText">Foreign Toolkit Project Team</h1>
-            </div>
+<body>
+    <Header>
+        <h1 id="headerTitle">Foreign JKB</h1>
+        <div id="headerBtnBox">
+            <button class="btnHeader">Home</button>
+            <button class="btnHeader">GitHub</button>
+            <button class="btnHeader">ReadMe</button>
+            <button class="btnHeader">Demo</button>
         </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="team-area col-md-12 d-flex justify-content-center">
-                {{ team }}
-            </div>
+    </Header>
+
+    <section>
+        <h1 id="subHeading">Meet the Team</h1>
         </div>
-    </div>
+    </section>
+    <figure>
+        <div class="gridContainer">
+
+        {{ team }}
+        
+            </div>
+    </figure>
+    <footer>
+        <p>Week10: Team Profile Generator // Node.Js Inquire</p>
+    </footer>
+
 </body>
 
 </html>

@@ -1,16 +1,16 @@
-<div class="card employee-card myContainer">
-    <div class="card-header" id="cardStyle">
-        <h2 class="card-title">{{ name }}</h2>
-        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{ role }}</h3>
+<div class="card" style="background-color: rgb(199, 238, 160);">
+    <div class="card-title">
+        <h2 class="cardHeader">{{ name }}</h2>
+        <h3 class="cardSub"><i class="fas fa-glasses"></i>{{ role }}</h3>
+        <img src="{{ profile }}" alt="profile pic" class="img-thumbnail">
     </div>
-    <div class="card-body">
-        <ul class="list-group">
-            <img src="{{ profile }}" alt="profile pic" class="img-thumbnail">
-            <li class="list-group-item">Id: {{ id }}</li>
-            <li class="list-group-item">Gender: {{ gender }}</li>
-            <li class="list-group-item">Age: {{ age }}</li>
-            <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
-            <li class="list-group-item">GitHub: <a href="https://github.com/{{ github }}" target="_blank" rel="noopener noreferrer">{{ github }}</a></li>
+    <div class="datailsContainer">
+        <li class="details">Id: {{ id }}</li>
+        <li class="details">Gender: {{ gender }}</li>
+        <li class="details">Age: {{ age }}</li>
+        <li class="details">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
+        <li class="details">GitHub: <a href="https://github.com/{{ github }}" target="_blank"
+                rel="noopener noreferrer">{{ github }}</a></li>
         </ul>
     </div>
 </div>
