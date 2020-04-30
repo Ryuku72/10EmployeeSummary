@@ -3,7 +3,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/Ryuku72/HomeworkW10?style=for-the-badge)
 
 # HomeWork Week 10 
-## Node.Js Group Progile Generator
+## Node.Js Group Profile Generator
 1st May 2020
 
 ### Aim
@@ -38,6 +38,8 @@ Overall, once I understood how to make the website this homework was not that di
 
 PS. BOOTSTAP has been removed!!!! 
 
+
+
 <a name="Project_Issues">
 
 ## Project Issues 
@@ -50,22 +52,28 @@ The next issue, was render. I did not know I had to ensure that the Class headin
 Currently there is a bug in which 2 classes placed next to each other will result in a "," separator on the webpage. Unsure how to fix this.
 
 
+
+
 <a name="Installation">
 
 ## Installation 
-Open the week10 homework folder in Terminal then type npm install. Once this is finished run node app.js
+1. Copy project from GitHub page. 
+2. Open terminal inside the folder and type 'npm install'
+3. Once npm is installed type 'node app.js'
+
 
 
 <a name="Usuage">
 
 ## Usuage 
-To create a team list
-  
+To create a team list by collecting certain data points. This project will ask for name, email, id, gender, age and assign you a profile picture.
+Answers are also verified  
 
 <a name="Tests">
 
 ## Tests
-npm run test has been used and everything passed
+npm run test shows everything passed.
+
 
 
 <a name="Additional_Information">
