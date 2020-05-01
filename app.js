@@ -18,12 +18,14 @@ console.log(chalk.blue(
     88__   dP   Yb 88__dP 88__   88 dP    " 88Yb88     88   88odP
     88""   Yb   dP 88"Yb  88""   88 Yb  "88 88 Y88     88   88"Yb
     88      YbodP  88  Yb 888888 88  YboodP 88  Y8     88   88  Yb
-                              //// Team Project Builder
+                              //// Team Project Builder\n
     `)));
-    console.log(chalk.red.bold(`## Please follow the instructions and choose your team`));
-    console.log(chalk.green("All spelling mistakes will need to correct it within the team.html page.")) 
-    console.log(chalk.green("Choose your roles carefully. Any issues please email foreign@foreignTK.com"))   
+    console.log(chalk.red.bold(`## Please follow the instructions and choose your team\n`));
+
+    console.log(chalk.green("All spelling mistakes will need to be corrected within the printed 'team.html' page.\n")) 
+    console.log(chalk.green("Choose your roles carefully. Any issues please email foreign@foreignTK.com\n\n"))   
     
+
 
 const manager = new Array();
 const engineer = new Array();
