@@ -9,6 +9,7 @@ const outputPath = path.join(OUTPUT_DIR, 'team.html');
 const render = require('./lib/htmlRenderer');
 const validator = require("email-validator");
 const chalk = require('chalk');
+const boxen = require('boxen');
 
 
 console.log(chalk.blue(
@@ -23,9 +24,6 @@ console.log(chalk.blue(
     console.log(chalk.green("All spelling mistakes will need to correct it within the team.html page.")) 
     console.log(chalk.green("Choose your roles carefully. Any issues please email foreign@foreignTK.com"))   
     
-    
-
-
 
 const manager = new Array();
 const engineer = new Array();
@@ -217,7 +215,8 @@ const getAnswers = () => inquirer.prompt(questions)
             let teamlist = render(team)
             fs.writeFile(outputPath, teamlist, function (err, file) {
                 if (err) throw err;
-                console.log('Teamlist Generated!')
+
+                console.log(boxen(chalk.yellow('Teamlist Generated! \nPlease check the output folder \nfor the "team.html" file'),{padding: 1, margin: 1, borderStyle: 'double', borderColor:'green', padding:2 ,margin:1}))
             })
 
         }
