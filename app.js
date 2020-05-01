@@ -7,7 +7,7 @@ const fs = require('fs');
 const OUTPUT_DIR = path.resolve(__dirname, 'output');
 const outputPath = path.join(OUTPUT_DIR, 'team.html');
 const render = require('./lib/htmlRenderer');
-var validator = require("email-validator");
+const validator = require("email-validator");
 
 
 const manager = new Array();
