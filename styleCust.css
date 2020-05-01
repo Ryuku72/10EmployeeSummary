@@ -70,10 +70,11 @@ figure {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column: auto;
-    margin: 2rem;
+    column-count: 3;
+    column-gap: 0.5em;
+    margin: 1.5rem;
     font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
     object-fit: cover;
 }
 
@@ -94,6 +95,7 @@ figure {
     text-align: center;
     width: 100%;
     padding: 10px;
+
   }
 
   .cardHeader {
