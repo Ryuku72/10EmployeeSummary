@@ -8,6 +8,23 @@ const OUTPUT_DIR = path.resolve(__dirname, 'output');
 const outputPath = path.join(OUTPUT_DIR, 'team.html');
 const render = require('./lib/htmlRenderer');
 const validator = require("email-validator");
+const chalk = require('chalk');
+
+
+console.log(chalk.blue(
+    (`
+    888888  dP"Yb  88""Yb 888888 88  dP""b8 88b 88   888888 88  dP
+    88__   dP   Yb 88__dP 88__   88 dP    " 88Yb88     88   88odP
+    88""   Yb   dP 88"Yb  88""   88 Yb  "88 88 Y88     88   88"Yb
+    88      YbodP  88  Yb 888888 88  YboodP 88  Y8     88   88  Yb
+                              //// Team Project Builder
+    `)));
+    console.log(chalk.red.bold(`## Please follow the instructions and choose your team`));
+    console.log(chalk.green("All spelling mistakes will need to correct it within the team.html page.")) 
+    console.log(chalk.green("Choose your roles carefully. Any issues please email foreign@foreignTK.com"))   
+    
+    
+
 
 
 const manager = new Array();
