@@ -152,7 +152,7 @@ const getAnswers = () => inquirer.prompt(questions)
 
         if (data.role == "Manager") {
             const resultManager = new Manager(data.name, data.id, data.email, data.officeNumber, data.role, data.age, data.gender);
-            manager.push(resultManager);
+            manager.concat(resultManager);
             profileCreator(data); 
             console.log(manager);
 
@@ -160,14 +160,14 @@ const getAnswers = () => inquirer.prompt(questions)
         
         if (data.role === "Engineer") {
             const resultEngineer = new Engineer(data.name, data.id, data.email, data.github, data.role, data.age, data.gender);
-            engineer.push(resultEngineer); 
+            engineer.concat(resultEngineer); 
             profileCreator(data);
             console.log(engineer);
         } 
 
         if (data.role === "Intern") {
             const resultIntern = new Intern(data.name, data.id, data.email, data.school, data.role, data.age, data.gender);
-            intern.push(resultIntern); 
+            intern.concat(resultIntern); 
             profileCreator(data);
             console.log(intern);
         }
