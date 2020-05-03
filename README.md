@@ -101,7 +101,7 @@ Objects, This, Callbacks, Constructors, Prototypes, TDD, Tests, Classes, Inherit
 >
 >
 
-<a name="bootstrap>
+<a name="bootstrap">
 
 ## Removing Bootsrap
 
