@@ -93,7 +93,7 @@ wesbite responsive.
 
 <a name="future">
 
-## Future plans [df1]
+## Future plans
 
 Currently the project is done however, I do want to add some additional flavour in the near 
 future.
