@@ -20,15 +20,15 @@ Second aim... remove bootstrap
 
 
 ### Key Concepts for HomeworkW10
-> Objects 
-> This 
-> Callbacks 
-> Constructors 
-> Prototypes 
-> TDD 
-> Tests 
-> Classes 
-> Inheritance
+* Objects 
+* This 
+* Callbacks 
+* Constructors 
+* Prototypes 
+* TDD 
+* Tests 
+* Classes 
+* Inheritance
 
 
  
