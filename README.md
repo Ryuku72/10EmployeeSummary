@@ -20,7 +20,15 @@ Second aim... remove bootstrap
 
 
 ### Key Concepts for HomeworkW10
-Objects, This, Callbacks, Constructors, Prototypes, TDD, Tests, Classes, Inheritance
+> Objects 
+> This 
+> Callbacks 
+> Constructors 
+> Prototypes 
+> TDD 
+> Tests 
+> Classes 
+> Inheritance
 
 
  
@@ -49,10 +57,14 @@ The most interesting point to make is that Tests `npm run test` are very particu
 I spent a lot of time playing around with inquirer. I learnt more about validation and a 
 number of packages that can run tests. I read a lot of documentation on how to run certain functions through validation. I also looked into things like chalk and how to make boxes etc. I didn't really do this in the end but will add more color to my terminal based work in the future. 
 
+I used photoshop to add profile pictures based on role, gender and age which was assisted by Luke. This was really helpful in indicating any further functions I wanted to add in the future.
+
 Overall, once I understood how to make the website this homework was not that difficult. It was the process of gettting there. 
- 
-> 01/05/20 BOOTSTAP has been removed!!!! 
-> Further information found under "Removing Bootstrap"
+
+
+* 01/05/20 BOOTSTAP has been removed!!!! 
+Further information found under "Removing Bootstrap".
+
 
 
 <a name="Project_Issues">
@@ -63,18 +75,18 @@ Issues were primary focused around 2 points. The first point was how to correctl
 from inquirer and place that into the classes. The second issue was using the render function. 
 
 In the past I would just use the results of inquire and pass that information into my 
-function. Homework W9 is a good example of this. `function(results)`
+function. Homework W9 is a good example of this. `function(results)`.
 
-However,I learnt the hard way that with Classes you need to break up the results and not expect the result to break down itself. `function(results.name, results.date, results.id)`
+However,I learnt the hard way that with Classes you need to break up the results and not expect the result to break down itself. `function(results.name, results.date, results.id)`.
 
-For render, I did not know I had to ensure that the Class heading (e.g. "engineer"), had to stay on the project in order for the function to work correctly `engineer {data} vs {data}`. Once I overcame this issue everything else was smooth sailing
+For render, I did not know I had to ensure that the Class heading (e.g. "engineer"), had to stay on the project in order for the function to work correctly `engineer {data} vs {data}`. Once I overcame this issue everything else was smooth sailing.
 
 There was a bug in the `htmlrender.js` fill which caused 2 classes that were placed next to each other to have `,` separator on the webpage. 
 
 > 01/05/20: This has been fixed by adding `.join('')` to the htmlrender file. Thanks to Luke.
 > 
 > 03/05/20 Another issue fixed. If you run tests with getRole using `return this.role`, the test 
-> will fail. Replaced `return this.role` with the actual role. eg. Engineer is `return "Engineer"`
+> will fail. Replaced `return this.role` with the actual role. eg. Engineer is `return "Engineer"`.
 >
 > Both bootstrap and my project have the same issue of you cant use grids to correct make the 
 > wesbite responsive.
@@ -86,18 +98,18 @@ There was a bug in the `htmlrender.js` fill which caused 2 classes that were pla
 ## Future plans
 
 Currently the project is done however, I do want to add some additional flavour in the near 
-future.
+future. There is a small profile at the end of the website to indicate outstanding issues. 
+
+* Need to add the box linking to week10 on the main website (navigator).
+* Needs to be responsive.
+
 > 
->(01/05/20 Complete) Use chalk and boxin for 'node app' file
+>(01/05/20 Complete) Use chalk and boxin for 'node app' file.
 > 
-> (03/05/20 Make a Mock website and link it to my profile page
-> (Incomplete) Make the mock website responsive
+> (03/05/20 Make a Mock website and link it to my profile page.
 >
-> (03/05/20 Complete) Add a Javascript for links
+> (03/05/20 Complete) Add a Javascript for links.
 > 
-
-I have made a small profile at the end of the website to indicate outstanding issues.
-
 
 
 <a name="bootstrap">
@@ -114,6 +126,7 @@ I removed bootstrap for a couple of reasons.
 
 The only issue about now is I need to make the website more responsive. Whilst Bootstrap responsiveness is a limited (maybe cause I have additional properties e.g. Profile picture), I will need to now go in and use media query to fix the problem. At least the profiles are in a grid of 3 columns... which is nice. 
 
+>the original files remain in the project as `...Original.html` which correspond with an initial stylesheet in the main folder under `style.js`.
 
 
 <a name="Installation">
@@ -131,34 +144,39 @@ $ node app.js
 <a name="Usuage">
 
 ## Usuage 
-To create a team list by collecting certain data points. This project will ask for name, email, id, gender, age and assign you a profile picture.
-Answers are also verified  
+To create a team list by collecting certain data points. This project will ask for name, email, id, gender, age and assign you a profile picture. 
 
 <a name="Tests">
 
 
 ## Tests
 npm run test shows everything passed.
+```sh
+$ cd homeworkW10
+$ npm install
+$ npm run test
+```
 
 
 <a name="Additional_Information">
 
 ## Additional Information
-Licenses: MIT
-Contributions: Joshua K Bader
+Licenses: MIT.
+Contributions: Joshua K Bader.
 
-## Resources
-W3 Schools
-Google Font
-Developer.mozilla.org
-Getbootstrap.com
-Stackoverflow.com
-Resources provided in Slack
-Youtube tutorials
-Dillinger.io
+### Resources
+* W3 Schools
+* Google Font
+* Developer.mozilla.org
+* Getbootstrap.com
+* Stackoverflow.com
+* Resources provided in Slack
+* Youtube tutorials
+* Dillinger.io
+* StackOverflow.com
 
 
-## Technology
+### Technology
 * PhotoShop
 * HyperText Markup Language
 * Cascading Style Sheets
