@@ -34,7 +34,6 @@ Objects, This, Callbacks, Constructors, Prototypes, TDD, Tests, Classes, Inherit
 
 ## Build Process 
 > 
-> 
 > This week we were provided with a lengthy explanation on how to tackle our homework. The two core concepts was, build a website using Classes and 
 > Constructors then run Npm Test to ensure everything passes. Whilst this seemed straight forward there were some heardles of overcome first.
 > 
@@ -52,13 +51,14 @@ Objects, This, Callbacks, Constructors, Prototypes, TDD, Tests, Classes, Inherit
 > Overall, once I understood how to make the website this homework was not that difficult. It was the process of gettting there. 
 > 
 > PS. BOOTSTAP has been removed!!!! 
-> 
-> 
+
+
 
 <a name="Project_Issues">
 
 ## Project Issues 
-> 
+
+
 > 
 > Issues were primary focused around 2 points. The first point was how to correctly use the data 
 > from inquirer and place that into the classes. In the 
@@ -83,6 +83,8 @@ Objects, This, Callbacks, Constructors, Prototypes, TDD, Tests, Classes, Inherit
 > Both bootstrap and my project have the same issue of you cant use grids to correct make the 
 > wesbite responsive.
 
+
+
 <a name="future">
 
 ## Future plans
@@ -101,6 +103,8 @@ Objects, This, Callbacks, Constructors, Prototypes, TDD, Tests, Classes, Inherit
 >
 >
 
+
+
 <a name="bootstrap">
 
 ## Removing Bootsrap
@@ -111,9 +115,11 @@ I removed bootstrap for a couple of reasons.
 
 2. I had issues controlling the properties themselves. Was hard to style and just annoying.
 
-3. It had a particular look and file catalgoue I dont like. I want my code to look as clean as possible and having <div> and <class="container-something> everywhere is not something I like.
+3. It had a particular look and file catalgoue I dont like. I want my code to look as clean as possible and having `<div>` and `<class="container-something">` everywhere is not something I like.
 
 The only issue about now is I need to make the website more responsive. Whilist bootstrap responsiveness is a lie (maybe cause I have additional properties e.g. Profile picture), I will need to now go in an use media query to fix the problem. At least the profiles are in a grid of 3 columns... which is nice. 
+
+
 
 
 <a name="Installation">
@@ -127,6 +133,7 @@ $ cd homeworkW10
 $ npm install
 $ node app
 ```
+
 
 <a name="Usuage">
 
