@@ -39,7 +39,7 @@ Header {
 
 #headerBtnBox {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     right: 2rem;
 }
 
@@ -60,9 +60,31 @@ Header {
     margin-left: 20px;
 }
 
+.btnHeader:hover {
+  transform: scale(1, 1.2);
+  text-shadow: whitesmoke 2px 2px;
+}
+
+#homeBtn:hover {
+  color: rgb(165, 76, 165);
+} 
+
+#gitHubBtn:hover {
+  color: rgb(116, 116, 209);
+}
+
+#readMeBtn:hover {
+  color: rgb(219, 179, 105);
+}
+
+#demoBtn:hover{
+  color: rgb(231, 96, 96);
+}
+
+
 figure {
    max-width: 100%;
-   width: 800px;
+   width: 1000px;
    margin: 0;
 }
 

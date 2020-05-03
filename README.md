@@ -21,6 +21,7 @@ Objects, This, Callbacks, Constructors, Prototypes, TDD, Tests, Classes, Inherit
 ## Contents
 * [Build_Process](#Build_Process)
 * [Project_Issues](#Project_Issues)
+* [Removing Bootstrap](#Bootstrap)
 * [Future Plans](#future)
 * [Installation](#Installation)
 * [Usuage](#Usuage)
@@ -59,36 +60,61 @@ Objects, This, Callbacks, Constructors, Prototypes, TDD, Tests, Classes, Inherit
 ## Project Issues 
 > 
 > 
-> Issues were primary focused around 2 points. The first point was how to correctly use the data from inquirer and place that into the classes. In the 
-> past I would just use the results of inquire in order to funnel that information into my function. Homework W9 is a good example of this.
+> Issues were primary focused around 2 points. The first point was how to correctly use the data 
+> from inquirer and place that into the classes. In the 
+> past I would just use the results of inquire in order to funnel that information into my 
+> function. Homework W9 is a good example of this.
 > 
-> I learnt the hard way that actually inside of the class I need to manually break down the results and not expect the result to break down itself. 
+> I learnt the hard way that actually inside of the class I need to manually break down the 
+> results and not expect the result to break down itself. 
 > This was annoying.
 > 
-> The next issue, was render. I did not know I had to ensure that the Class heading e.g. "engineer", had to stay on the project in order for the 
+> The next issue, was render. I did not know I had to ensure that the Class heading e.g. 
+> "engineer", had to stay on the project in order for the 
 > function to work correctly. Once I overcame this issue everything else was smooth sailing
 > 
-> Currently there is a bug in which 2 classes placed next to each other will result in a "," separator on the webpage. Unsure how to fix this.
+> Currently there is a bug in which 2 classes placed next to each other will result in a "," 
+> separator on the webpage. Unsure how to fix this.
 > 01/05/20: This has been fixed by adding .join('') to the htmlrender file.
 > 
-> 
+> 03/05/20 Another issue fixed. If you run tests with getRole using 'this.role', the test will 
+> fail. Replaced 'this.role' with the actual role. eg. Engineerr is "Engineer"
+>
+> Both bootstrap and my project have the same issue of you cant use grids to correct make the 
+> wesbite responsive.
 
 <a name="future">
 
 ## Future plans
 
-> Currently the project is done however, I do want to add some additional flavour in the near future
+> Currently the project is done however, I do want to add some additional flavour in the near 
+> future.
 > 
-> For the node terminal I want to customize the start command.
-> I want to use chalk and I want to add some icons // boxes
+>(01/05/20 Complete) Use chalk and boxin for 'node app' file
 > 
-> For the website I want to link a mock to my main profile page and make it responsive
-> 
-> For the project itself I want to input a script to handle the links and maybe add some additional flare
+> (03/05/20 Make a Mock website and link it to my profile page
+> (Incomplete)Make the mock website responsive
+>
+> (03/05/20 Complete) Add a Javascript for links
 > 
 > Currently I have made a small profile at the end of the website to indicate outstanding issues.
 >
 >
+
+<a name="bootstrap>
+
+## Removing Bootsrap
+
+I removed bootstrap for a couple of reasons. 
+
+1. When you had more than 4 or 5 employee the page would smosh the profiles togehter and not place them inside a grid. 
+
+2. I had issues controlling the properties themselves. Was hard to style and just annoying.
+
+3. It had a particular look and file catalgoue I dont like. I want my code to look as clean as possible and having <div> and <class="container-something> everywhere is not something I like.
+
+The only issue about now is I need to make the website more responsive. Whilist bootstrap responsiveness is a lie (maybe cause I have additional properties e.g. Profile picture), I will need to now go in an use media query to fix the problem. At least the profiles are in a grid of 3 columns... which is nice. 
+
 
 <a name="Installation">
 
