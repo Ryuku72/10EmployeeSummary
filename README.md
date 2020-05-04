@@ -1,5 +1,5 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/Ryuku72/HomeworkW10?style=for-the-badge)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Ryuku72/HomeworkW10?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Ryuku72/HomeworkW10?style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/Ryuku72/HomeworkW10?style=for-the-badge)
 
 # HomeWork Week 10 
