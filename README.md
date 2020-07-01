@@ -11,8 +11,8 @@ This week homework task was to build a Profile Generator and run tests against o
 Second aim... remove bootstrap
 
 ### Mockups
-Mock Page: https://ryuku72.github.io/10EmployeeSummary/
-YouTube Walkthrough: https://youtu.be/FWMDHz_RQfg
+* Mock Page: https://ryuku72.github.io/10EmployeeSummary/
+* YouTube Walkthrough: https://youtu.be/FWMDHz_RQfg
 
 ## Key Concepts for HomeworkW10
 > * Objects: Classes, Inheritance, constructors 
