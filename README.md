@@ -1,30 +1,23 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/Ryuku72/HomeworkW10?style=for-the-badge)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Ryuku72/HomeworkW10?style=for-the-badge)
-![GitHub contributors](https://img.shields.io/github/contributors/Ryuku72/HomeworkW10?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/Ryuku72/10EmployeeSummary?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Ryuku72/10EmployeeSummary?style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/Ryuku72/10EmployeeSummary?style=for-the-badge)
 
-# HomeWork Week 10 
-## Node.Js Group Profile Generator
-1st May 2020
-
+# Employee Summary
+__PROJECT10: 1st May 2020__
+<br>
 
 ### Aim
 This week homework task was to build a Profile Generator and run tests against our code. Like HomeworkW9 there was heavy use of node.js and inquirer.
 Second aim... remove bootstrap
 
-
-
 ### Working Project Example
 * Mock Output https://ryuku72.github.io/HomeworkW10/
 * YouTube Video (prior "," bug fix) https://youtu.be/FWMDHz_RQfg
-
-
 
 ## Key Concepts for HomeworkW10
 > * Objects: Classes, Inheritance, constructors 
 > * This, callbacks, prototypes 
 > * TDD, tests 
-
-
  
 ## Contents
 * [Build_Process](#Build_Process)
@@ -35,8 +28,6 @@ Second aim... remove bootstrap
 * [Usuage](#Usuage)
 * [Tests](#Tests)
 * [Additional_Information](#Additional_Information)
-
-
 
 <a name="Build_Process">
 
@@ -55,11 +46,8 @@ I used photoshop to add profile pictures based on role, gender and age which was
 
 Overall, once I understood how to make the website this homework was not that difficult. It was the process of gettting there. 
 
-
 * 01/05/20 BOOTSTAP has been removed!!!! 
 Further information found under "Removing Bootstrap".
-
-
 
 <a name="Project_Issues">
 
