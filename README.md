@@ -4,15 +4,14 @@
 
 # Employee Summary
 __PROJECT10: 1st May 2020__
+* Mock Output https://ryuku72.github.io/HomeworkW10/
+* YouTube Video (prior "," bug fix) https://youtu.be/FWMDHz_RQfg
 <br>
 
 ### Aim
 This week homework task was to build a Profile Generator and run tests against our code. Like HomeworkW9 there was heavy use of node.js and inquirer.
 Second aim... remove bootstrap
 
-### Working Project Example
-* Mock Output https://ryuku72.github.io/HomeworkW10/
-* YouTube Video (prior "," bug fix) https://youtu.be/FWMDHz_RQfg
 
 ## Key Concepts for HomeworkW10
 > * Objects: Classes, Inheritance, constructors 
