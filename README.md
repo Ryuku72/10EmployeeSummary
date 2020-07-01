@@ -13,11 +13,12 @@ Second aim... remove bootstrap
 ### Mockups
 * Mock Page: https://ryuku72.github.io/10EmployeeSummary/
 * YouTube Walkthrough: https://youtu.be/FWMDHz_RQfg
+<br>
 
 ## Key Concepts for HomeworkW10
-> * Objects: Classes, Inheritance, constructors 
-> * This, callbacks, prototypes 
-> * TDD, tests 
+* Objects: Classes, Inheritance, constructors 
+* This, callbacks, prototypes 
+* TDD, tests 
  
 ## Contents
 * [Build_Process](#Build_Process)
